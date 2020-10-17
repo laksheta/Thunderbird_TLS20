@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main (){
+	
+	int n,i,p[100],l[100],t[100];
+	
+	printf("Input:\n\n");
+	scanf("%d",&n);
+	
+	if (n<1 || n>100){
+		printf("n harus antara 1 sampai 100");
+		return 0;
+	}
+	else {
+		for (i=0;i<n;i++){
+			scanf("%d %d %d", &p[i], &l[i], &t[i]);
+		}
+	}
+	printf("\nOutput:\n");
+	for (i=0;i<n;i++){
+		if (p[i]<1 || p[i]>100 || l[i]<1 || l[i]>100|| t[i]<1 || t[i]>100){
+		printf("\np,l,t maksimal 100, minimal 1");
+		}
+		else if (t[i]>40){
+			printf("\n");
+		}
+		else{ 
+			printf ("\n%d", p[i]*l[i]*t[i]);
+		}
+	}
+	return 0;
+}
